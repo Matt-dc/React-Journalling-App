@@ -1,3 +1,6 @@
+This journalling app allows for creating, editing and erasing posts.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
