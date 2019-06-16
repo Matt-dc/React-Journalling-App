@@ -4,16 +4,14 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport')
 
 const User = require('../models/User');
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 
+require('../config/passport') //is this needed?? TEST for req.user...
+
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 
 router.get('/login', forwardAuthenticated, (req, res) => res.render('login'))
 
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'))
-
-router.get('/dashboard', (req, res) => res.render('dashboard', {
-  user: req.user
-}))
 
 
 router.post('/register', (req, res) => {
@@ -94,7 +92,7 @@ router.post('/login', (req, res, next) => {
 
       successRedirect: '/dashboard',
       failureRedirect: '/login',
-      failureFlash: 'There was a problem logging you in' 
+      failureFlash: true 
     })(req, res, next)
   })
 

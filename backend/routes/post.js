@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../models/Post.js')
 
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 
 // individual post page accessed through link
 router.get('/posts/:id', (req, res) => {
@@ -16,16 +17,16 @@ router.get('/posts/:id', (req, res) => {
 
 
 //new post form
-router.get('/newpost', async (req, res) => res.render('newpost'))
+router.get('/newpost', ensureAuthenticated, async (req, res) => res.render('newpost'))
 
 
 // add new post to database
 router.post('/newpost', (req, res, next) => {
     var newPost = new Post ()
 
+    newPost.author = req.user.id,
     newPost.title = req.body.title,
     newPost.description = req.body.description,
-    newPost.author = req.body.author,
     newPost.content = req.body.content
 
     newPost.save(err => {

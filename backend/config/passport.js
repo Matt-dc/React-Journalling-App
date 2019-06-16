@@ -17,7 +17,7 @@ module.exports = function(passport) {
                 
                     if(!user) {
                         console.log("email not registered")
-                        return done( null, false, { error: 'That email is not registered' })        
+                        return done( null, false, { message: 'That email is not registered' })        
                     }
                     
                     // now check password
@@ -28,7 +28,7 @@ module.exports = function(passport) {
                             return done(null, user);
                         } else  {
                             console.log("password incorrect")
-                            return done(null, false, {error: 'password or email incorrect'})
+                            return done(null, false, {message: 'password or email incorrect'})
                         }
                     })
                  })
@@ -45,6 +45,5 @@ module.exports = function(passport) {
           done(err, user);
         });
       });
-
 
 }

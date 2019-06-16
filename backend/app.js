@@ -24,8 +24,7 @@ app.use(bodyParser.json())
 
 app.set('view engine', 'ejs')
 
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 app.use(cookieParser());
 app.use(session({
@@ -33,11 +32,17 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.use(flash());
 
 app.use((req, res, next) => {
     res.locals.success = req.flash('msg');
-    res.locals.error = req.flash('err');
+    res.locals.error_msg = req.flash('error_smsg');
+    res.locals.error = req.flash('error');
     next(); 
 })
 

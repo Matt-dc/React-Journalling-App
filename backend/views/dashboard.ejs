@@ -1,6 +1,16 @@
-Hey [enter name]
-
+Hey <strong><%= user.name %></strong> <br>
+Your id is <%= user.id %><br><br>
 Welcome to your dashboard!
+
+
+ <% userPosts.forEach(post => { %>
+
+    <h3 style="color: green"> <%= post.title %> </h3>
+
+<% }) %> 
+
+
+
 
 
 <a href="/logout">Log out</a>
