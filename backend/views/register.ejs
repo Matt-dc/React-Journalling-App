@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <%- include navbar %>
+
+    <form class="" action="/register" method="post">
+
+      <label for="">Name</label><input id="name" type="name" name="name" value="<%=  typeof name != 'undefined' ? name : '' %>"> <br>
+      <label for="">Email</label><input id="email" type="email" name="email" value="<%= typeof email != 'undefined' ? email : '' %>"> <br>
+      <label for="">Password</label><input id="password" type="password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>"> <br>
+      <label for="">Repeat Password</label><input id="password2" type="password" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>"> <br>
+      <input type="submit" name="submit" value="Post">
+
+
+      <script>
+        
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var password2 = document.getElementById('password2').value;
+
+      </script>
+
+    </form>
+    <p><a href="/">Back</a></p>
+
+    <%   
+      if(typeof errors != 'undefined') {
+
+        errors.forEach(err => { 
+          
+          %> <h1> <%= Object.values(err) %> </h1> <%
+        }) 
+      }  
+    %>
+
+  </body>
+</html>
