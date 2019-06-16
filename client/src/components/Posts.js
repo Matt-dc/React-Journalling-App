@@ -3,24 +3,16 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Jumbotron, Row, Col, Image, Button, Panel } from 'react-bootstrap';
 import CustomNav from './CustomNav'
 
-class Posts extends Component {
+const Posts = props => {
 
+    return (
 
-render(){
-
-    return(
       <div>
-      <p>A post</p>
-      <p>A post</p>
-      <p>A post</p>
-      <p>A post</p>
-      <p>A post</p>
+          <p>This is the posts page!</p>
+       
       </div>
 
-
     );
-}
-
 }
 
 export default Posts

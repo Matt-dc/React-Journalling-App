@@ -1,59 +1,64 @@
 import React, { Component, Redirect } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Jumbotron, Container, Row, Col, Image, Button, Panel } from 'react-bootstrap';
-import CustomNav from './CustomNav'
-import './styles/first.css'
+import Modal from './Modal'
+import './styles/home.css'
+
 
 class Home extends Component {
 
 
 render(){
+
   return(
 
-    <div>
+    <div className="app">
+        <Container>
+            <Row ClassName="bgImg">
+            <Col xs={10} md={12}>
+                <Image src="assets/workspace.jpg" alt="workspace" />
+                       <div className="inlineText">
+                          Capture your ideas, thoughts and moments 
+                        <div>
 
-          <Container>
-              <Row>
-                  <h1>Journal App</h1>
+                        {this.props.showModal ? (
+                            <Modal
+                                showModal={this.props.showModal}
+                                modalRef={this.props.modalRef}
+                                handleOutsideClick={this.props.handleOutsideClick}
+                            />
+                        ) : null }
 
-                      <div className="imgContainer">
-                        <Image src="assets/headerImage.jpeg" alt="Typewriter" className="headerImg" />
-                        <div className="textCentered">Remember the past to give perspective to the future</div>
+                            <Button
+                                id="login"
+                                onClick={this.props.handleModal}> Sign in
+                            </Button>
 
-                      </div>
+                            <Button
+                                id="signup"
+                                onClick={this.props.handleModal}> Sign up
+                            </Button>
+                        </div>
+                </div>
 
-                  <Link to="/post"><Button>Write a post</Button></Link>
-              </Row>
+            </Col>
 
-          <hr />
-          <p>Recent Writings</p>
-          <p>Post bla</p>
-          <p>Post bla</p>
-          <p>Post bla</p>
-          <p>Post bla</p>
+            </Row>
 
+            <hr />
+          <p>{this.props.showModal}</p>
+          <p>Somemore random text</p>
           <hr/>
-
-          <p>Read your fundamental motivations - why am I doing this?</p>
           <hr/>
-
-          <p></p>
-          <hr/>
-
           <p>Video from selected channels</p>
           <hr/>
-
-
-
           <p>View your stats - get an overview of your writing</p>
           <hr/>
-
           <p>download your writings</p>
           <hr/>
-
           <p>share a post - publish your work online</p>
-          </Container>
 
+        </Container>
     </div>
 
 
