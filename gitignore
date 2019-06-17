@@ -1,0 +1,6 @@
+#ignore backend node files
+node_modules/
+
+#ignore frontend node files
+client/node_modules/
+
