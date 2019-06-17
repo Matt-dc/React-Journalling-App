@@ -1,0 +1,5 @@
+#ignore backend and frontend node files
+node_modules/
+
+
+
