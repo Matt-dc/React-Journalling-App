@@ -9,7 +9,7 @@ require('../config/passport') //is this needed?? TEST for req.user...
 
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 
-router.get('/login', (req, res) => res.send( "hello" ));
+router.get('/login', (req, res) => res.json( "hello" ));
 
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'))
 

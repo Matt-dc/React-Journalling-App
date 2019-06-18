@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 
 const Post = props => (
 
+  
+
     <div>
-        { props.post }
+
+        Hello this is the posts page
+
+        <div> {props.currentPost.title} </div>
+
     </div>
 )
 

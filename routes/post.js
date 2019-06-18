@@ -7,35 +7,33 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 // individual post page accessed through link
 router.get('/posts/:id', (req, res) => {
   const id = req.params.id
-    const post = Post.findById(id)
-    .exec()
-    .then(post =>
-      res.render('post',{
-        post
-    }))
-})
+    Post.findById(id)
+    .then(post => {
+      res.send(post)
+        }
+      )
+    })
 
 
 //new post form
 router.get('/newpost', ensureAuthenticated, async (req, res) => res.render('newpost'))
 
-
+//use req.user.id in the future
 // add new post to database
 router.post('/newpost', (req, res, next) => {
-    var newPost = new Post ()
-
-    newPost.author = req.user.id,
-    newPost.title = req.body.title,
-    newPost.description = req.body.description,
-    newPost.content = req.body.content
-
+    const newPost = new Post ({
+        author: req.body.author,
+        title: req.body.title,
+        description: req.body.description,
+        content: req.body.content
+    })
     newPost.save(err => {
       if(err) {
         console.log(err)
         return next(err)
       } else {
         console.log('post created!');
-        res.redirect('/success');
+        res.json({newPost})
       }
     }
   )
