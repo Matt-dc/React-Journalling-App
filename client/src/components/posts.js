@@ -1,5 +1,7 @@
 import React from 'react';
-import Post from './post';
+import { BrowserRouter as Link } from 'react-router-dom';
+
+
 
 const Posts = props => (
 
@@ -8,14 +10,19 @@ const Posts = props => (
         <h1>Recent Articles</h1>
 
         {
-        props.posts.map(item => (
+        props.testdata.map(item => (
 
-            <li style={{color: "red"}} onClick={props.setPost(item._id)}>{item.title}</li>
+        <Link to={{ pathname: `/posts/${item.title}`, state: {item: item} }} >{item.title}</Link>
 
          ))
         }
+        <br/><br/><br/>
         
     </div>
 )
 
 export default Posts
+
+
+
+

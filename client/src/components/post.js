@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 
-const Post = props => (
 
-  
+class Post extends Component {
 
-    <div>
+    componentWillMount() {
 
-        Hello this is the posts page
+        const { item } = this.props.location.state
 
-        <div> {props.currentPost.title} </div>
+        this.setState({
+            title: item.title,
+            content: item.content,
+            author: item.author,
+        })
+    }
 
-    </div>
-)
+    render() {
+        return (
+
+            <div>
+            
+                {this.state.title}<br/>
+                {this.state.content}<br/>
+                {this.state.author}<br/>
+            
+            </div>
+        )
+    }
+
+    }
 
 export default Post;

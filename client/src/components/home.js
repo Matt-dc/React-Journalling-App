@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component, Redirect } from 'react';
 import Posts from './posts'
+import Login from './login'
 
 const Home = props => (
 

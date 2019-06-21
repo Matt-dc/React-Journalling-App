@@ -11,7 +11,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
 
 router.get('/login', (req, res) => res.json( "hello" ));
 
-router.get('/register', forwardAuthenticated, (req, res) => res.render('register'))
+router.get('/register', (req, res) => res.render('register'))
 
 
 router.post('/register', (req, res) => {
@@ -34,13 +34,7 @@ router.post('/register', (req, res) => {
       } 
       
     if( errors.length > 0 ){
-      res.render( 'register', {
-        errors,  
-        name,  
-        email,
-        password,
-        password2
-      });
+      res.json({msg: errors});
       console.log(errors)
 
     } else {
@@ -49,13 +43,7 @@ router.post('/register', (req, res) => {
      
          if(user) {
             errors.push({ msg: 'That email is already being used' })
-            res.render('register', {
-              errors,
-              name,  
-              email,
-              password,
-              password2
-            });
+            res.json(user);
           } else {
             const newUser = new User({
               name,
@@ -75,8 +63,8 @@ router.post('/register', (req, res) => {
                   .save()
                   .then(user => {
                     console.log('User saved successfully')
-                    req.flash( 'msg', 'You are now registered and can log in')
-                    res.redirect('/login')
+                    res.json(user)
+
                   })  
                   .catch(err => console.log(`There was an error: ${err}`));
                 })
@@ -87,14 +75,14 @@ router.post('/register', (req, res) => {
 })
 
 
-router.post('/login', (req, res, next) => {
-    passport.authenticate('local', {
+router.post('/login', 
+    passport.authenticate('local'), 
+      function(req, res) {
+        console.log('login successful')
+        res.json({ username: req.user })
+        console.log(req.user)
+      })
 
-      successRedirect: '/dashboard',
-      failureRedirect: '/login',
-      failureFlash: true 
-    })(req, res, next)
-  })
 
   router.get('/logout', (req, res) => {
     req.logout();
