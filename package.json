@@ -8,7 +8,9 @@
     "client-install": "npm install --prefix client",
     "server": "node server.js --prefix server",
     "dev": "nodemon server.js --prefix server",
-    "client": "npm start --prefix client"
+    "client": "npm start --prefix client",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -41,5 +43,9 @@
   "devDependencies": {
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
-  }
+  },
+"engines": {
+    "node": "8.9.2"
+}
+
 }
