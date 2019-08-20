@@ -1,0 +1,123 @@
+/* ### Util styles ### */
+
+
+/* spinner */
+.spinner-container {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+
+/* Password check icons */
+.fa-times {
+    background-color: red;
+    padding: 0.3em;
+    border-radius: 7px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.fa-check {
+    background-color: green;
+    padding: 0.2em;
+    border-radius: 7px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.fa-bars {
+    margin-right: 1em;
+}
+
+
+
+/* Likes */
+.likes-button {
+    padding: 0.5em;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff
+}
+
+.likes-button:hover {
+    border: 1px solid black;
+}
+
+
+.liked {
+    background-color:#62a8fa;
+}
+
+
+.not-liked {
+    background-color:#828285;
+}
+
+.like-button-not-logged-in {
+    background-color:grey;
+    padding: 0.5em;
+    border-radius: 7px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    color: #fff
+}
+
+
+
+
+/* ### Modal styles ### */
+
+/* Edit post modal */
+.modal-90w{
+    width: 70%;
+    max-width: none!important;
+}
+
+.modal-header {
+    border: none;
+}
+
+.edit-modal-title {
+    font-weight: bold;
+    font-size: 2.6em;
+
+}
+
+.edit-post-image {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.edit-modal-title-container {
+    text-align: center !important;
+    margin: 1.5em auto !important;
+}
+
+.input-chars-remaining {
+    font-size: 0.8em;
+    color: #5c5c5c;
+    margin-left: 2em;
+}
+
+
+
+
+/* FORM STYLES */
+
+.user-message {
+    text-align: center;
+    margin-top: 4em;
+}

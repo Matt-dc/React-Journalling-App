@@ -1,0 +1,66 @@
+/* ###   Page styles   ### */
+ 
+
+/* general */
+
+.default-page-header {
+    font-size: 2.4;
+    font-weight: bold;
+}
+
+
+/* Homepage */
+.banner {
+    background-color: #fff;
+    padding: 5% 0;
+    margin: 3% 0 5% 0;
+    border: none;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+
+}
+
+
+/* ### create post page ### */
+
+.uploaded-create-post-image-text {
+    font-size: 0.9em;
+    color: #575454;
+    font-style: italic;
+}
+
+.create-post-error {
+    font-size: 0.9em;
+    color: red;
+    margin-left: 2em;
+}
+
+.post-header-container {
+    border-bottom: 1px dotted #969696; 
+}
+
+
+
+
+/* ### Posts Page ### */
+
+/* postHeader  */
+
+.postHeader-title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.postHeader-tagline {
+    color: #5e5c5c;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.postHeader-topic {
+    color: #5e5c5c;
+    font-size: 0.9em;
+    font-weight: bold;
+    
+}
+
