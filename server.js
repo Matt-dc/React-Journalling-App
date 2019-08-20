@@ -5,13 +5,24 @@ const bodyParser = require('body-parser');
 var session = require("express-session");
 const passport = require('passport');
 const MongoStore = require('connect-mongo')(session)
-
+const path = require("path")
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors = require('cors');
 const db = require('./database')
 
 const { PORT, DB_URL } = require('./config/config')
+
+
+// ... other imports 
+
+// ... other app.use middleware 
+
+
+// Right before your app.listen(), add this:
+
+
+
 
 //gmail for email validation: d3vt35t1ng@gmail.com
 
@@ -20,6 +31,7 @@ app.use(bodyParser.json());
 
 app.use('/uploads', express.static('uploads'))
 
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
@@ -103,6 +115,9 @@ const options = {
   useFindAndModify: false
 }
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 // DATABASE CONNECTION
 mongoose.connect(DB_URL, options, () => {

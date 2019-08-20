@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios'
 import ContextWrapper from './ContextWrapper';
 import Spinner from './components/utils/spinner'
+import Error404 from './components/utils/error404'
 
 // layout
 import NavBar from './components/layout/navBar'
@@ -360,8 +361,7 @@ toggleSaveHandler = id => {
 
                   <Route exact path='/readpost/:id' render={(props) => <Post { ...props } warnLogin={this.warnLogin} /> } />
 
-                  {/* <Route exact path="/:id" render={() => <Post warnLogin={this.warnLogin} /> } /> */}
-
+                  <Route path='/' component={Error404} />
 
               </Switch>
               
