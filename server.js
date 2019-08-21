@@ -11,7 +11,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 const db = require('./database')
 
-const { PORT, DB_URL } = require('./config/config')
 
 //gmail for email validation: d3vt35t1ng@gmail.com
 
@@ -20,7 +19,10 @@ app.use(bodyParser.json());
 
 app.use('/uploads', express.static('uploads'))
 
-app.use(express.static(path.join(__dirname, "client", "build")))
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
@@ -30,13 +32,13 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(cors(
- {
-  origin: 'http://localhost:3000',//frontend server localhost:8080
-  methods:['GET','POST','PUT','DELETE'],
-  credentials: true // enable set cookie
- }
-));
+// app.use(cors(
+//  {
+//   origin: 'http://localhost:3000',//frontend server localhost:8080
+//   methods:['GET','POST','PUT','DELETE'],
+//   credentials: true // enable set cookie
+//  }
+// ));
 
 app.use(morgan('dev'))
 
@@ -104,12 +106,9 @@ const options = {
   useFindAndModify: false
 }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 // DATABASE CONNECTION
-mongoose.connect(DB_URL, options, () => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://matt-dc:remembering1000@ds159782.mlab.com:59782/heroku_7h7cdfpb', options, () => {
     app.listen(PORT, () => console.log(`Successful connection on port ${PORT}!`))
 })
 .catch(err => console.log(err))

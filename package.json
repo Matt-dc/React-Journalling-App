@@ -6,10 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-install": "npm install --prefix client",
-    "server": "node server.js --prefix server",
     "dev": "nodemon server.js --prefix server",
-    "client": "npm start --prefix client",
-    "start": "node server.js",
+
+    "start" : "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod" : "node server.js",
+    "start:dev" : "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
@@ -44,8 +48,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   },
-"engines": {
+  "engines": {
     "node": "8.9.2"
-}
-
+  }
 }
