@@ -20,10 +20,6 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'))
 
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Origin', req.headers.origin);
@@ -106,6 +102,13 @@ const options = {
   useFindAndModify: false
 }
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) =>
+  res.sendFile(path.resolve("build", "index.html"))
+)
+}
 
 // DATABASE CONNECTION
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://matt-dc:remembering1000@ds159782.mlab.com:59782/heroku_7h7cdfpb', options, () => {
