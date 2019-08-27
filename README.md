@@ -64,8 +64,6 @@ Introduce an email into the sign up field and you will receive an email with a l
  <img src="siteimages/emailsignup.png?raw=true" width="700px" />
 </p>
 
-
-&nbsp;
 ## Live Version
 You can see a live working version hosted on Heroku here:
 
