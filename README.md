@@ -24,8 +24,9 @@ This is a clone of the popular blogging network Medium. It implements the functi
 
 ### Follow Users
 &nbsp;
-
-<img src="siteimages/followusers.png?raw=true" style="text-align: center" width="300px" />
+<p  style="text-align: center;" width="300px" >
+ <img src="siteimages/followusers.png?raw=true"/>
+</p>
 
 &nbsp; &nbsp;
 
