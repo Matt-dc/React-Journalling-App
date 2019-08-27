@@ -1,10 +1,10 @@
 # React Journalling App - Medium Clone
-MERN stack app styled using React Bootstrap
+MERN stack app styled using <a href="https://react-bootstrap.github.io/">React Bootstrap.</a>
 
 &nbsp;
 
 ## Why build it?
-This is intended as a portfolio project. What began as a full-stack MERN CRUD app, eventually grew to incorporate many of the features present on Medium's own site. This is in no way an attempt to rival the site but rather is my own personal goal to develop my skills with the MERN stack by attempting to rebuild a well-known platform.
+This is intended as a portfolio project. What began as a full-stack MERN CRUD app, eventually grew to incorporate many of the features present on <a href="https://medium.com/">Medium</a>'s own site. This is in no way an attempt to rival the site but rather is my own personal goal to develop my skills with the MERN stack by attempting to rebuild a well-known platform.
 
 <p align="center">
  <img src="siteimages/homepage.png?raw=true" width="700px" />
