@@ -61,7 +61,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. 
 
 <p align="center">
- <img src="siteimages/emailsignup.png?raw=true" width="600px" />
+ <img src="siteimages/emailsignup.png?raw=true" width="500px" />
 </p>
 
 ## Live Version
