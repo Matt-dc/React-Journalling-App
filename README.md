@@ -42,7 +42,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 
 ### Functionality
 
----------
+======
 
 #### Follow Users
 &nbsp;
@@ -58,9 +58,6 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 <p align="center">
  <img src="siteimages/personalized.png?raw=true" width="500px" />
 </p>
-
-
-
 
 &nbsp;
 ## Usage
