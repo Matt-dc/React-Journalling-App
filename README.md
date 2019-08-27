@@ -53,7 +53,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 
 #### Personalise posts according to selected topics
 <p align="center">
- <img src="siteimages/personalized.png?raw=true" width="500px" />
+ <img src="siteimages/personalized.png?raw=true" width="400px" />
 </p>
 
 &nbsp;
