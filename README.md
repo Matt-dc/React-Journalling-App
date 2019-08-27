@@ -7,6 +7,8 @@ This is intended as a portfolio project. What began as a full-stack MERN CRUD ap
 
 <img src="siteimages/homepage.png?raw=true" width="700px" />
 
+&nbsp;&nbsp;
+
 
 ## Overview
 This is a clone of the popular blogging network Medium. It implements the functionality to:
