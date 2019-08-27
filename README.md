@@ -75,7 +75,7 @@ blbal link
 
 
 ```bash
-cd React-Jounalling-App
+cd React-Journalling-App
 npm install
 npm run concurrently
 ```
