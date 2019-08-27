@@ -1,4 +1,5 @@
 # React Journalling App - Medium Clone
+MERN stack app styled using React Bootstrap
 
 &nbsp;
 
