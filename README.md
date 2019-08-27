@@ -16,12 +16,12 @@ This is intended as a portfolio project. What began as a full-stack MERN CRUD ap
 ## Overview
 This is a clone of the popular blogging network Medium. It implements the functionality to:
  - Create and update posts
- - follow users
- - receive personalized content based on topic preferences
-- edit reading history
-- update and reset login information
-- comment and reply to comments
-- like both posts and comments
+ - Follow users
+ - Receive personalized content based on topic preferences
+- Edit reading history
+- Update and reset login information
+- Comment and reply to comments
+- Like both posts and comments
 
 
 &nbsp;
