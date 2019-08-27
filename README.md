@@ -10,7 +10,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 - comment and reply to comments
 - like both posts and comments
 
-![signup email] (/siteimages/emailsignup.png?raw=true)
+![signup email] (siteimages/emailsignup.png?raw=true)
 
 
 &nbsp;
