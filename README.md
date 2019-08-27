@@ -50,7 +50,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
  <img src="siteimages/followusers.png?raw=true" width="300px" />
 </p>
 
-&nbsp; &nbsp;
+&nbsp;
 
 #### Personalise posts according to selected topics
 &nbsp;
