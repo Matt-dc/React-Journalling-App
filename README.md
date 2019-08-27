@@ -32,11 +32,11 @@ It passes in props to child components using a higher order function (ContextWra
 
 Several components also implement <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a>.
 
-Sessions are handled with Express sessions and email authentication is controlled using a JSON Web Token.
+Sessions are handled with <a href="https://www.npmjs.com/package/express-session">Express sessions</a> and email authentication is controlled using a <a href="https://jwt.io/">JSON Web Token</a>.
 
 &nbsp;
 ## Third Party
-The project users PassportJS for authenticating users and Nodemailer for both validating login details and also resetting the user’s password. 
+The project uses <a href="http://www.passportjs.org/">PassportJS</a> for authenticating users, as well as <a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a> for password hashing. Nodemailer is used for both validating login details and also resetting the user’s password. 
 
 Emails with a link are sent by way of smtp.gmail.com, API calls are done with Axios and file uploads are handled with Multer.
 
