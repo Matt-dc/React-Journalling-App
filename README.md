@@ -32,7 +32,7 @@ It passes in props to child components using a higher order function (ContextWra
 
 Several components also implement Hooks.
 
-Sessions are handled with Express sessions and email authentication with JWT.
+Sessions are handled with Express sessions and email authentication is controlled using a JSON Web Token.
 
 &nbsp;
 ## Third Party
