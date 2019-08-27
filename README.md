@@ -14,7 +14,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 <img src="siteimages/emailsignup.png?raw=true" width="700px" />
 
 
-<img src="siteimages/followusers.png?raw=true" width="500px" />
+<img src="siteimages/followusers.png?raw=true" width="400px" />
 
 
 <img src="siteimages/homepage.png?raw=true" width="700px" />
