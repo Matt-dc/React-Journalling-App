@@ -1,71 +1,59 @@
-This journalling app allows for creating, editing and erasing posts.
+# React Journalling App - Medium Clone
+
+## Overview
+This is a clone of the popular blogging network Medium. It implements the functionality to:
+ - Create and update posts
+ - follow users
+ - receive personalized content based on topic preferences
+- edit reading history
+- update and reset login information
+- comment and reply to comments
+- like both posts and comments
+
+![email signup]: (https://photos.google.com/photo/AF1QipMCGyFXqcJmWEh3Z3cv5xf0sDT7OjO3nn2XA-8_)
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&nbsp;
+## Why build it?
+This is intended as a portfolio project. What began as a full-stack MERN CRUD app, eventually grew to incorporate many of the features present on Medium's own site. This is in no way an attempt to rival the site but rather is my own personal aim to develop my own skills with the MERN stack by attempting to rebuild a well-known platform.
 
-## Available Scripts
+&nbsp;
+## Usage
+Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. 
 
-In the project directory, you can run:
+&nbsp;
+## More specifics
+The App uses React’s Context API to pass user auth details to different components. 
 
-### `npm start`
+It passes in props to child components using a higher order function (ContextWrapper.js) for props outside the render method, and UserConsumer for within. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Several components also implement Hooks.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Sessions are handled with Express sessions and email authentication with JWT.
 
-### `npm test`
+&nbsp;
+## Third Party
+The project users PassportJS for authenticating users and Nodemailer for both validating login details and also resetting the user’s password. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Emails with a link are sent by way of smtp.gmail.com, API calls are done with Axios and file uploads are handled with Multer.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+&nbsp;
+## Live Version
+You can see a live working version hosted on Heroku here:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+blbal link
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd React-Jounalling-App
+npm install
+npm run concurrently
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
