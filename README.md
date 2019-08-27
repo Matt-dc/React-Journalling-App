@@ -20,7 +20,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 <img src="siteimages/homepage.png?raw=true" width="700px" />
 
 
-<img src="siteimages/personalized.png?raw=true" width="700px" />
+<img src="siteimages/personalized.png?raw=true" width="600px" />
 
 
 &nbsp;
