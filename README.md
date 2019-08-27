@@ -39,14 +39,6 @@ This is a clone of the popular blogging network Medium. It implements the functi
  <img src="siteimages/personalized.png?raw=true" width="600px" />
 </p>
 
-&nbsp;
-## Usage
-Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. 
-
-<p align="center">
- <img src="siteimages/emailsignup.png?raw=true" width="700px" />
-</p>
-
 
 &nbsp;
 ## More specifics
@@ -63,6 +55,15 @@ Sessions are handled with Express sessions and email authentication with JWT.
 The project users PassportJS for authenticating users and Nodemailer for both validating login details and also resetting the user’s password. 
 
 Emails with a link are sent by way of smtp.gmail.com, API calls are done with Axios and file uploads are handled with Multer.
+
+
+&nbsp;
+## Usage
+Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. 
+
+<p align="center">
+ <img src="siteimages/emailsignup.png?raw=true" width="700px" />
+</p>
 
 
 &nbsp;
