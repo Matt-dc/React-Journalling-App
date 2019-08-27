@@ -2,11 +2,12 @@ import React from 'react';
 import { Image, Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import AuthorThumbnail from '../../utils/authorThumbnail'
+import ContextWrapper from '../../../ContextWrapper'
 
 const CenterThumbnail = props => {
 
     const bookmark = 
-    props.savedArticles && props.savedArticles.length > 0 && props.isAuth ?
+    props.savedArticles && props.isAuth ?
         <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
                 "fa fa-bookmark-o bookmark-icon" : 
                 "fa fa-bookmark bookmark-icon" }
@@ -33,14 +34,14 @@ const CenterThumbnail = props => {
                             <Col md={10} sm={10}>
                                 {/* {props.post._id} */}
                                 <Link to={`/readpost/${props.post._id}`}><h5 className="centerThumbnail-title">{props.post.title}</h5></Link>
-                                <Link to={`/readpost/${props.post._id}`}><p className="centerThumbnail-tagline">{props.post.tagline}</p></Link>
+                                <Link to={`/readpost/${props.post._id}`}><p className="centerThumbnail-tagline">{props.post.tagline.substring(0,20)}...</p></Link>
                             </Col>
                             
                         </Row>
                         <Row>
-                          <AuthorThumbnail 
-                            post={props.post}
-                          />      
+                            <AuthorThumbnail 
+                                post={props.post}
+                            />  
                         </Row>
                 </Col>
             </Row>
@@ -49,4 +50,4 @@ const CenterThumbnail = props => {
     )
 }
 
-export default CenterThumbnail
+export default ContextWrapper(CenterThumbnail)

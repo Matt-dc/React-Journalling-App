@@ -24,7 +24,6 @@ exports.checkUserStatus = (req, res) => {
 //  Sign up  ###
 // #############
 
-
 exports.send_email = (req, res) => {
 
     const email = req.body.email;   

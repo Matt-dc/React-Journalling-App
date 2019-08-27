@@ -1,21 +1,21 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import ContextWrapper from '../../../ContextWrapper'
 import AuthorDetails from '../../utils/authorThumbnail'
 
 const FeaturedThumbnailLeft = props => {
 
-    const bookmark = 
-    props.savedArticles && props.savedArticles.length > 0 && props.isAuth ?
-        <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
-                "fa fa-bookmark-o bookmark-icon" : 
-                "fa fa-bookmark bookmark-icon" }
-                id={props.post._id}
-                style={{ cursor: 'pointer' }}
-                onClick={() => props.toggleSaveHandler(props.post._id)}>
-            </i>
-        : ''
+    const bookmark =  
+        props.savedArticles && props.isAuth ?
+            <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
+                    "fa fa-bookmark-o bookmark-icon" : 
+                    "fa fa-bookmark bookmark-icon" }
+                    id={props.post._id}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => props.toggleSaveHandler(props.post._id)}>
+                </i>
+            : ''
 
     return (
 
@@ -60,6 +60,6 @@ const FeaturedThumbnailLeft = props => {
     )
 }
 
-export default FeaturedThumbnailLeft
+export default ContextWrapper(FeaturedThumbnailLeft)
 
 

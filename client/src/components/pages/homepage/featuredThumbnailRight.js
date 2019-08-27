@@ -1,13 +1,13 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import ContextWrapper from '../../../ContextWrapper'
 import AuthorDetails from '../../utils/authorThumbnail'
 
 const FeaturedThumbnailRight = props => {
 
     const bookmark = 
-    props.savedArticles && props.savedArticles.length > 0 && props.isAuth ?
+    props.savedArticles && props.isAuth ?
         <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
                 "fa fa-bookmark-o bookmark-icon" : 
                 "fa fa-bookmark bookmark-icon" }
@@ -60,6 +60,6 @@ const FeaturedThumbnailRight = props => {
     )
 }
 
-export default FeaturedThumbnailRight
+export default ContextWrapper(FeaturedThumbnailRight)
 
 

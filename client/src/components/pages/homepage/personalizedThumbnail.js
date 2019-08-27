@@ -9,7 +9,7 @@ import ContextWrapper from '../../../ContextWrapper';
 const PersonalizedThumbnail = props => {
 
     const bookmark = 
-        props.savedArticles && props.savedArticles.length > 0 && props.isAuth ?
+        props.savedArticles && props.isAuth ?
             <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
                     "fa fa-bookmark-o bookmark-icon" : 
                     "fa fa-bookmark bookmark-icon" }

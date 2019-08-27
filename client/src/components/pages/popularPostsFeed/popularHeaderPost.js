@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import AuthorDetails from '../../utils/authorThumbnail'
+import ContextWrapper from '../../../ContextWrapper'
 
-export default function PopularHeaderPost(props) {
+function PopularHeaderPost(props) {
 
     const bookmark = 
-        props.savedArticles && props.savedArticles.length > 0 && props.isAuth ?
+        props.savedArticles && props.isAuth ?
             <i class={props.savedArticles.indexOf(props.post._id) === -1 ?
                     "fa fa-bookmark-o bookmark-icon" : 
                     "fa fa-bookmark bookmark-icon" }
@@ -75,3 +76,5 @@ export default function PopularHeaderPost(props) {
     )
 
 }
+
+export default ContextWrapper(PopularHeaderPost)
