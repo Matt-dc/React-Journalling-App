@@ -11,7 +11,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 - like both posts and comments
 
 
-<img src="https://photos.google.com/photo/AF1QipMCGyFXqcJmWEh3Z3cv5xf0sDT7OjO3nn2XA-8_" alt="email signup" />
+[image]: https://photos.google.com/photo/AF1QipMCGyFXqcJmWEh3Z3cv5xf0sDT7OjO3nn2XA-8_
 
 
 
