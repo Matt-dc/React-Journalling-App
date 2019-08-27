@@ -1,5 +1,5 @@
 # React Journalling App - Medium Clone
-MERN stack app styled using <a href="https://react-bootstrap.github.io/">React Bootstrap.</a>
+MERN stack app styled using <a href="https://react-bootstrap.github.io/">React Bootstrap</a>.
 
 &nbsp;
 
@@ -26,11 +26,11 @@ This is a clone of the popular blogging network Medium. It implements the functi
 
 &nbsp;
 ## More specifics
-The App uses React’s Context API to pass user auth details to different components. 
+The App uses React’s <a href="https://reactjs.org/docs/context.html">Context API</a> to pass user auth details to different components. 
 
 It passes in props to child components using a higher order function (ContextWrapper.js) for props outside the render method, and UserConsumer for within. 
 
-Several components also implement Hooks.
+Several components also implement <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a>.
 
 Sessions are handled with Express sessions and email authentication is controlled using a JSON Web Token.
 
