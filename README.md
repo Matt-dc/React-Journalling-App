@@ -1,5 +1,8 @@
 # React Journalling App - Medium Clone
 
+## Why build it?
+This is intended as a portfolio project. What began as a full-stack MERN CRUD app, eventually grew to incorporate many of the features present on Medium's own site. This is in no way an attempt to rival the site but rather is my own personal aim to develop my own skills with the MERN stack by attempting to rebuild a well-known platform.
+
 <img src="siteimages/homepage.png?raw=true" width="700px" />
 
 
@@ -23,11 +26,6 @@ This is a clone of the popular blogging network Medium. It implements the functi
 ### Personalise posts according to selected topics
 
 <img src="siteimages/personalized.png?raw=true" width="600px" />
-
-
-&nbsp;
-## Why build it?
-This is intended as a portfolio project. What began as a full-stack MERN CRUD app, eventually grew to incorporate many of the features present on Medium's own site. This is in no way an attempt to rival the site but rather is my own personal aim to develop my own skills with the MERN stack by attempting to rebuild a well-known platform.
 
 &nbsp;
 ## Usage
