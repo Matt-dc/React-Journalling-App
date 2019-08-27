@@ -59,7 +59,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 
 &nbsp;
 ## Usage
-Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. 
+Introduce an email into the sign up field and you will receive an email with a link (valid for a limited time) redirecting you to finish the sign up. Password reset is handled in virtually the same way (but green button!).
 
 <p align="center">
  <img src="siteimages/emailsignup.png?raw=true" width="500px" />
