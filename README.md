@@ -18,6 +18,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
  - Create and update posts
  - Follow users
  - Receive personalized content based on topic preferences
+ - set and update profile information
 - Edit reading history
 - Update and reset login information
 - Comment and reply to comments
