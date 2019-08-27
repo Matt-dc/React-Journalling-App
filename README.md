@@ -11,7 +11,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 - like both posts and comments
 
 
-<img src="siteimages/emailsignup.png?raw=true" width="600px" />
+<img src="siteimages/emailsignup.png?raw=true" width="700px" />
 
 
 &nbsp;
