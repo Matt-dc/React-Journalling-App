@@ -23,23 +23,6 @@ This is a clone of the popular blogging network Medium. It implements the functi
 - like both posts and comments
 
 
-
-### Follow Users
-&nbsp;
-<p align="center" >
- <img src="siteimages/followusers.png?raw=true" width="300px" />
-</p>
-
-&nbsp; &nbsp;
-
-### Personalise posts according to selected topics
-&nbsp;
-
-<p align="center">
- <img src="siteimages/personalized.png?raw=true" width="600px" />
-</p>
-
-
 &nbsp;
 ## More specifics
 The App uses React’s Context API to pass user auth details to different components. 
@@ -55,6 +38,28 @@ Sessions are handled with Express sessions and email authentication with JWT.
 The project users PassportJS for authenticating users and Nodemailer for both validating login details and also resetting the user’s password. 
 
 Emails with a link are sent by way of smtp.gmail.com, API calls are done with Axios and file uploads are handled with Multer.
+
+
+### Functionality
+
+---------
+
+#### Follow Users
+&nbsp;
+<p align="center" >
+ <img src="siteimages/followusers.png?raw=true" width="300px" />
+</p>
+
+&nbsp; &nbsp;
+
+#### Personalise posts according to selected topics
+&nbsp;
+
+<p align="center">
+ <img src="siteimages/personalized.png?raw=true" width="500px" />
+</p>
+
+
 
 
 &nbsp;
