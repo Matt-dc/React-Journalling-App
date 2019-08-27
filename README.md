@@ -25,7 +25,7 @@ This is a clone of the popular blogging network Medium. It implements the functi
 
 <img src="siteimages/followusers.png?raw=true" width="400px" />
 
-&nbsp;
+&nbsp; &nbsp;
 
 ### Personalise posts according to selected topics
 &nbsp;
