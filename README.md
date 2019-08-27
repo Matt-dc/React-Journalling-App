@@ -42,7 +42,7 @@ Emails with a link are sent by way of smtp.gmail.com, API calls are done with Ax
 
 ### Functionality
 
-------
+---------------------------------------
 
 #### Follow Users
 <p align="center" >
