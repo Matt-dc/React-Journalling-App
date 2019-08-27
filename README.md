@@ -36,7 +36,7 @@ Sessions are handled with <a href="https://www.npmjs.com/package/express-session
 
 &nbsp;
 ## Third Party
-The project uses <a href="http://www.passportjs.org/">PassportJS</a> for authenticating users, as well as <a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a> for password hashing. <a href="https://nodemailer.com/about/">Nodemailer</a> is used for both validating login details and also resetting the user’s password. 
+The project uses <a href="http://www.passportjs.org/">PassportJS</a> for authenticating users, as well as <a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a> for password hashing. <a href="https://nodemailer.com/about/">Nodemailer</a> is used for both sending the initial validaton email and also in the case of a forgotten password reset. 
 
 Emails with a link are sent by way of <a href="https://support.google.com/a/answer/176600?hl=en">smtp.gmail.com</a>, API calls are done with <a href="https://github.com/axios/axios">Axios</a> and file uploads are handled with <a href="https://github.com/expressjs/multer">Multer</a>.
 
