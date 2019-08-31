@@ -46,8 +46,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-
-
 // ----- express sessions -----
 app.use(session({
     secret: 'oompa loompa',
@@ -75,6 +73,11 @@ app.use('/users', userRoutes);
 app.use('/comments', commentRoutes);
 
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+
 app.use((req, res, next) => {
   const error = new Error('Not found');
   error.status = 404;
@@ -92,8 +95,6 @@ app.use((error, req, res, next) => {
 })
 
 
-
-
 // Get rid of Mongoose deprecation warnings.
 const options = {
   useCreateIndex: true,
@@ -101,9 +102,6 @@ const options = {
   useFindAndModify: false
 }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 // DATABASE CONNECTION
 mongoose.connect(DB_URL, options, () => {
