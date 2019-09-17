@@ -69,7 +69,7 @@ Introduce an email into the sign up field and you will receive an email with a l
 ## Live version
 You can see a live working version hosted on Heroku here:
 
-blbal link
+https://medium-clone-blogging-app.herokuapp.com/
 
 
 ## Installation
